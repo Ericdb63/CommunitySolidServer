@@ -1,0 +1,32 @@
+[
+  {
+    "email": "marguerite@example.com",
+    "password": "chainges-test-only",
+    "pods": [{ "name": "marguerite" }]
+  },
+  {
+    "email": "nadia@example.com",
+    "password": "chainges-test-only",
+    "pods": [{ "name": "nadia" }]
+  },
+  {
+    "email": "marcus@example.com",
+    "password": "chainges-test-only",
+    "pods": [{ "name": "marcus" }]
+  },
+  {
+    "email": "yvette@example.com",
+    "password": "chainges-test-only",
+    "pods": [{ "name": "yvette" }]
+  },
+  {
+    "email": "joan@example.com",
+    "password": "chainges-test-only",
+    "pods": [{ "name": "joan" }]
+  },
+  {
+    "email": "denise@example.com",
+    "password": "chainges-test-only",
+    "pods": [{ "name": "denise" }]
+  }
+]

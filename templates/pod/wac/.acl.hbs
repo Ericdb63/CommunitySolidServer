@@ -2,12 +2,9 @@
 @prefix acl: <http://www.w3.org/ns/auth/acl#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
-# The homepage is readable by the public
-<#public>
-    a acl:Authorization;
-    acl:agentClass foaf:Agent;
-    acl:accessTo <./>;
-    acl:mode acl:Read.
+# chaînges: the public read rule on the Pod's top folder was removed.
+# Upstream lets anyone list the top folder's contents; for family records even
+# folder names are private. Only the owner (and people the owner names) can see it.
 
 # The owner has full access to every resource in their pod.
 # Other agents have no access rights,
