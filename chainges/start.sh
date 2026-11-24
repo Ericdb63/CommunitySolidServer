@@ -23,7 +23,17 @@ fi
 
 mkdir -p "$HERE/data"
 
-exec node bin/server.js \
+# The server crashed on Node 26 ("Lock expired", 16 Nov 2026 on Samwise) and runs well on
+# Node 22. On a newer Node, borrow Node 22 for this command only (downloaded once by npx).
+NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]')"
+if (( NODE_MAJOR > 22 )); then
+  echo "Node $NODE_MAJOR found; running the server on Node 22 instead."
+  NODE=(npx -y -p node@22 node)
+else
+  NODE=(node)
+fi
+
+exec "${NODE[@]}" bin/server.js \
   -c @css:config/file.json \
   -f "$HERE/data" \
   -p "$PORT" \

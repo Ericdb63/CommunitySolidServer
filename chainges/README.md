@@ -9,7 +9,8 @@ family's information in this server.
 
 ## Start it
 
-Needs Node.js 18 or newer.
+Needs Node.js 18 or newer. On Node 23 or newer the script runs the server on Node 22, because the
+server crashed on Node 26 in our first test (16 November 2026).
 
 ```bash
 ./chainges/start.sh            # http://localhost:3000, keeps data between runs
